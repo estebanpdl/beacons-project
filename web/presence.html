@@ -1,0 +1,21 @@
+<html>
+	<head>
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js'></script>
+	
+	</head>
+	
+	<body>
+    <script type='text/javascript'>
+    var stomp = Stomp.client('wss://ovs.kontakt.io:9090/stream?apiKey=DNwJnXSswWOkrwbjYeYUtWphDjrpnHjr');
+
+    var headers = {'api-key': 'DNwJnXSswWOkrwbjYeYUtWphDjrpnHjr'};
+
+    stomp.connect(headers, function(cb) {
+        var topic = stomp.subscribe('/presence/stream/0C:8D:DB:D9:0D:5B', function(e) {
+            console.log(JSON.parse(e.body));
+        }, headers);
+    });
+    </script>
+	</body>
+</html>
