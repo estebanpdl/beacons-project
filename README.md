@@ -6,7 +6,7 @@
 
 **`By venue`**
 
-- `API Url`: */stream/:venueId/presence* / for data from all Gateways assigned to a single Location (Venue)
+- `API Url`: */stream/:venueId/presence* --- for data from all Gateways assigned to a single Location (Venue)
 - `venueId`: *19635d7f-76fc-4347-8e00-a4163f7fe180*
 - `Data`:
 
@@ -20,8 +20,8 @@
 
 **`By AP`**
 
-- `API Url`: */presence/stream/:receiverId* / for data from a single Gateway
-- `venueId`: *0C:8D:DB:D9:0D:5B*
+- `API Url`: */presence/stream/:receiverId* --- for data from a single Gateway
+- `receiverId`: *0C:8D:DB:D9:0D:5B* - AP
 - `Data`:
 
 		deviceAddress: null // if beacon, it returns mac-address
