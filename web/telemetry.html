@@ -12,7 +12,7 @@
     var headers = {'api-key': 'DNwJnXSswWOkrwbjYeYUtWphDjrpnHjr'};
 
     stomp.connect(headers, function(cb) {
-        var topic = stomp.subscribe('/stream/dtTgpt/health', function(e) {
+        var topic = stomp.subscribe('/stream/dtTgpt/accelerometer', function(e) {
             console.log(JSON.parse(e.body));
         }, headers);
     });
